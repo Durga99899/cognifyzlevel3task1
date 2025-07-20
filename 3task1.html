@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Gallery & Slideshow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2 class="title">🖼️ Image Gallery with Thumbnails</h2>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/150" class="thumbnail" onclick="enlarge(this)">
+    <img src="https://via.placeholder.com/150/ff7f7f" class="thumbnail" onclick="enlarge(this)">
+    <img src="https://via.placeholder.com/150/87ceeb" class="thumbnail" onclick="enlarge(this)">
+    <img src="https://via.placeholder.com/150/90ee90" class="thumbnail" onclick="enlarge(this)">
+  </div>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+  </div>
+
+  <h2 class="title">📸 CSS Image Slideshow</h2>
+  <div class="slideshow">
+    <div class="slide-track">
+      <img src="https://via.placeholder.com/400x200" alt="Slide 1">
+      <img src="https://via.placeholder.com/400x200/ff7f7f" alt="Slide 2">
+      <img src="https://via.placeholder.com/400x200/87ceeb" alt="Slide 3">
+      <img src="https://via.placeholder.com/400x200/90ee90" alt="Slide 4">
+    </div>
+  </div>
+
+  <script>
+    function enlarge(img) {
+      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById("lightbox-img").src = img.src;
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
